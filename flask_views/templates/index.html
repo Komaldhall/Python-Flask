@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Hello Flask</h1>
+
+    {% for i in range(0,times): %}
+    <p>My name is {{name}}</p>
+    {% endfor %}
+
+    {% if name=="komal" %}
+    <p>hi...there</p>
+    {% endif %}
+
+    {% for n in list: %}
+    <p>{{n}}</p>
+    {% endfor %}
+    <h4>Students</h4>
+    {% for x in student %}
+    <p>{{x['name']}}-{{x['age']}}</p>
+    {% endfor %}
+   
+    
+</body>
+</html>

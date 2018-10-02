@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Info</title>
+    <style>
+        label{
+            display:inline-block;
+            width:140px;
+        }
+        .margin_b{
+            margin-bottom: 15px;
+        }
+        .margin_r{
+            margin-right:4px;
+        }
+       
+           
+
+    </style>
+</head>
+<body>
+    <h1>Thanks for the Survey!!</h1>
+    
+    <form action='/'>
+        <label class="margin_b margin_r">Name:</label>{{name}}
+        <br>
+        <label class="margin_b">Dojo Location:</label> 
+        {{location}}
+        <br>
+        <label class="margin_b">Favorite Language:</label> 
+        {{language}}
+        <br>
+        <label class="margin_b">Comment:</label>
+        {{message}}
+        <br>
+        <br>
+        <input type='submit' value='Go Back' style='margin-left:238px;'>
+    </form>
+   
+   
+
+</body>
+</html>

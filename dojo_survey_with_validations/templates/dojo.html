@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <title>Dojo Survey</title>
+    <style>
+        label{
+            display:inline-block;
+            width:140px;
+        }
+        .margin_b{
+            margin-bottom: 15px;
+        }
+        .width{
+            width:150px;
+        }
+        .layout{
+            border:2px solid #03a0a0;;
+            padding:40px;
+            font-size:15px;
+            font-family: sans-serif;
+            background-color: azure;
+            /* text-align: center; */
+            width:450px;
+        }
+        .color{
+            color:#dc3545;
+            font-weight: bold;
+        }
+           
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <h1>!!Survey Page!!</h1><br>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+            <p class="color">{{message}}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <form action='/success' method='post'>
+            <label class="margin_b">Your Name:</label><input type='text' name='name' style='margin-left: 4px; width:146px;'>
+            <br>
+            <label class="margin_b">Dojo Location:</label> 
+            <select class="width" name='location'>
+                    <option value="sanjose">San Jose</option>
+                    <option value="burbank">Burbank</option>
+                    <option value="newyork">New York</option>
+                    <option value="seattle">Seattle</option>
+            </select>
+            <br>
+            <label class="margin_b">Favorite Language:</label> 
+            <select class="width" name='language'>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="css">Css</option>
+            </select>
+            <br>
+            <label class="margin_b">Comment(Required):</label>
+            <br>
+            <textarea name="message" rows="5" cols="39"></textarea>
+            <br>
+            <br>
+            <input type='submit' value='Submit' class="btn btn-success" style='margin-left:238px;'>
+        </form>
+    </div>
+   
+   
+
+</body>
+</html>

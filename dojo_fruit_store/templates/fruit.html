@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Fruit Order</title>
+    <style>
+        *{
+            margin: auto;
+            text-align: center; 
+        }
+        .width{
+            width:200px;
+        }   
+        .underline{
+            text-decoration: underline;
+        }
+        .color{
+            background-color:#dee2e6;
+            padding:30px;
+            margin:30px;
+            text-align: center;
+        }          
+
+    </style>
+</head>
+<body>
+    <div class="color"> 
+        <h2 >Dojo Fruit Store!</h2>
+    
+        <h6>Welcome to Dojo Fruit Store!</h6>
+        <div>Your dojo decided to buy fruits for all the students!</div> 
+        <div>Please use this app to tell us what would you like to have! Once we get your order, we'll charge your student account 
+            automatically.</div>
+        <div>Dojo Fruit Store is proudly built using Flask.</div>
+    </div>
+        <form action='/success' method='post'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">        
+                    
+                        <h5 class="underline">What would you like to buy?</h5>
+                        <table class="table table-striped table-bordered" >
+                            <tr>
+                                <th>Fruit Name</th>
+                                <th>Quantity</th>
+                            </tr>
+                            <tr>
+                                <td>Strawbeery</td>
+                                <td>
+                                    <select name='strawbeery'>
+                                        {% for i in range(0,100): %}
+                                            <option>{{i}}</option>
+                                        {% endfor %}    
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rasbeery</td>
+                                <td>
+                                    <select name='rasbeery'>
+                                        {% for i in range(0,100): %}
+                                            <option>{{i}}</option>
+                                        {% endfor %}    
+                                    </select>
+                                </td>    
+                            </tr>
+                            <tr>
+                                <td>Apple</td>
+                                <td>
+                                    <select name='apple'>
+                                        {% for i in range(0,100): %}
+                                            <option>{{i}}</option>
+                                        {% endfor %}    
+                                    </select>
+                                </td>
+                            </tr>
+                        
+                        </table>
+                    </div>
+                    <div class="col-sm">
+                        <h5 class="underline">Your Information</h5>
+                        <label class="width">Name:</label><input type='text' name='name'>
+                        <br>
+                        <label class="width">Your Student ID:</label><input type='text' name='idd' >
+                        <br><br>
+                    </div> 
+                </div>
+            </div>
+            <div class="color">
+                <button type='submit' class="btn btn-outline-dark" value='Buy me stuff!' style="margin-left:70px">Buy me Stuff!!</button>
+            </div>
+        </form>
+    
+        
+
+        
+
+</body>
+</html>

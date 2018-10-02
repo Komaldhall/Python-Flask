@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkerboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        /* table{
+            font-family: sans-serif;
+            font-size: 15px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            
+        }
+        th{
+            border: 1px solid black;
+        }
+        td{
+            border: 1px solid black;
+        } */
+        
+           
+         
+         
+    </style>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <h2>Welcome</h2>
+    <table class="table table-striped">
+      
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Full Name</th>
+            </tr>
+            
+            {% for i in users_info %}
+            <tr>
+               <td>{{i.first_name}}</td>
+               <td>{{i.last_name}}</td>
+               <td>{{i.first_name}} {{i.last_name }}</td>
+            </tr>
+            {% endfor %}
+     
+    </table>
+    {% for student in students: %}
+    <h2>Student Name: {{ student['name'] }} </h2>
+    <p>Student Age: {{ student['age'] }} </p>
+    {% endfor %}
+    
+
+   
+   
+    
+</body>
+</html>

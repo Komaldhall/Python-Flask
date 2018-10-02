@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Survey Info</title>
+    <style>
+        label{
+            display:inline-block;
+            width:140px;
+        }
+        .margin_b{
+            margin-bottom: 15px;
+        }
+        .margin_r{
+            margin-right:4px;
+        }
+        .layout{
+            border:2px solid #03a0a0;
+            padding:40px;
+            font-size:15px;
+            font-family: sans-serif;
+            background-color: azure;
+            /* text-align: center; */
+            width:450px;
+        }
+       
+           
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <h1>Thanks for the Survey!!</h1>
+        
+        <form action='/'>
+            <label class="margin_b margin_r">Name:</label>{{name}}
+            <br>
+            <label class="margin_b">Dojo Location:</label> 
+            {{location}}
+            <br>
+            <label class="margin_b">Favorite Language:</label> 
+            {{language}}
+            <br>
+            <label class="margin_b">Comment:</label>
+            {{message}}
+            <br>
+            <br>
+            <input type='submit' value='Go Back' class="btn btn-info" style='margin-left:238px;'>
+        </form>
+    </div>
+   
+
+</body>
+</html>
